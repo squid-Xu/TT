@@ -1,16 +1,43 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/count/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "计数"
+			}
+		},
+		{
+			"path": "pages/record/index",
+			"style": {
+				"navigationBarTitleText": "记录"
 			}
 		}
 	],
+	"tabBar": {
+		"color": "#909399",
+		"selectedColor": "#29CCCC",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/count/index",
+				"iconPath": "static/count.png",
+				"selectedIconPath": "static/count-select.png",
+				"text": "计数"
+			},
+			{
+				"pagePath": "pages/record/index",
+				"iconPath": "static/record.png",
+				"selectedIconPath": "static/record-select.png",
+				"text": "记录"
+			}
+		]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarTitleText": "计数器",
+		"navigationBarBackgroundColor": "#ffffff",
 		"backgroundColor": "#F8F8F8"
 	}
 }
