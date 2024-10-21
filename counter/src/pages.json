@@ -35,10 +35,9 @@
 		]
 	},
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
+		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "计数器",
-		"navigationBarBackgroundColor": "#ffffff",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarBackgroundColor": "#29CCCC"
 	},
 	"easycom": {
 		"autoscan": true,

@@ -1,46 +1,28 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png" />
-		<view class="text-area">
-			<text class="title">{{ title }}</text>
-		</view>
-		<wd-button>主要按钮</wd-button>
-		<wd-button type="success">成功按钮</wd-button>
-		<wd-button type="info">信息按钮</wd-button>
-		<wd-button type="warning">警告按钮</wd-button>
-		<wd-button type="error">危险按钮</wd-button>
+	<view class="app-content">
+		<input type="text" class="input" v-model="title" placeholder="自定义文件名" />
 	</view>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-const title = ref('Hello');
+const title = ref('');
 </script>
 
-<style>
-.content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+<style lang="scss" scoped>
+.app-content {
+	margin: 30rpx;
 }
-
-.logo {
-	height: 200rpx;
-	width: 200rpx;
-	margin-top: 200rpx;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 50rpx;
-}
-
-.text-area {
-	display: flex;
-	justify-content: center;
-}
-
-.title {
-	font-size: 36rpx;
-	color: #8f8f94;
+.input {
+	padding: 0 36rpx;
+	height: 84rpx;
+	border-radius: 10rpx;
+	border: 1rpx solid #dddddd;
+	background: #f8f8f8;
+	box-shadow: 0px 3px 6px 0px rgba(242, 242, 242, 0.7);
+	&::placeholder {
+		font-size: 28rpx;
+		color: #999999;
+	}
 }
 </style>
