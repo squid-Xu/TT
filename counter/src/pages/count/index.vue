@@ -4,37 +4,38 @@
 		<div class="figure">{{ count }}</div>
 		<div class="operation">
 			<div class="controls flex-1">
-				<div class="set box">
-					<div class="item">
+				<div class="box flex-1">
+					<div class="circle bg-1">
 						<img class="icon" src="../../static/set.png" alt="" />
 					</div>
-					<div class="desc">减一</div>
+					<div class="title">设置</div>
 				</div>
-				<div class="set box">
-					<div class="item">
-						<img class="icon" src="../../static/minus.png" alt="" />
+				<div class="box flex-1">
+					<div class="circle bg-3">
+						<img class="icon" src="../../static/save.png" alt="" />
 					</div>
-					<div class="desc">减一</div>
+					<div class="title">保存</div>
 				</div>
-				<div class="set box">
-					<div class="item">
-						<img class="icon" src="../../static/minus.png" alt="" />
+				<div class="box flex-1">
+					<div class="circle bg-2">
+						<img class="icon" src="../../static/refer.png" alt="" />
 					</div>
-					<div class="desc">减一</div>
+					<div class="title">重置</div>
 				</div>
 			</div>
+			<div class="blank"></div>
 			<div class="controls flex-2">
-				<div class="minus box">
-					<div class="item">
+				<div class="box flex-2">
+					<div class="circle bg-4">
 						<img class="icon" src="../../static/minus.png" alt="" />
 					</div>
-					<div class="desc">减一</div>
+					<div class="title">每次减一</div>
 				</div>
-				<div class="add box">
-					<div class="item">
+				<div class="box flex-3">
+					<div class="circle bg-5">
 						<img class="icon" src="../../static/add.png" alt="" />
 					</div>
-					<div class="desc">减一</div>
+					<div class="title">每次加一</div>
 				</div>
 			</div>
 		</div>
@@ -57,6 +58,7 @@ const count = ref<number>(0);
 }
 //文件夹
 .folder {
+	flex-shrink: 0;
 	padding: 0 36rpx;
 	margin: 30rpx 0;
 	height: 84rpx;
@@ -71,9 +73,9 @@ const count = ref<number>(0);
 }
 // 数字区域
 .figure {
+	flex-shrink: 0;
 	margin: 50rpx 0 50rpx;
 	text-align: right;
-	background-color: aquamarine;
 	font-family: PingFang SC;
 	font-weight: bold;
 	font-size: 150rpx;
@@ -84,11 +86,9 @@ const count = ref<number>(0);
 	flex: 1;
 	display: flex;
 	// flex-direction: row-reverse;
-	background-color: blueviolet;
 	.controls {
 		display: flex;
 		flex-direction: column;
-		padding-right: 30rpx;
 	}
 	.box {
 		margin-bottom: 30rpx;
@@ -100,24 +100,24 @@ const count = ref<number>(0);
 		border: 1rpx solid #dddddd;
 		background: #f8f8f8;
 		box-shadow: 0px 3px 6px 0px rgba(242, 242, 242, 0.7);
-		.item {
-			width: 164rpx;
-			height: 164rpx;
+		.circle {
+			width: 100rpx;
+			height: 100rpx;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background: #38b6ff;
 			border-radius: 50%;
 			.icon {
-				width: 82rpx;
-				height: 82rpx;
+				width: 40rpx;
+				height: 40rpx;
 			}
 		}
-		.desc {
+		.title {
 			font-family: PingFang SC;
 			font-weight: 500;
 			font-size: 34rpx;
 			color: #333333;
+			padding-top: 30rpx;
 		}
 	}
 }
@@ -130,7 +130,19 @@ const count = ref<number>(0);
 .flex-3 {
 	flex: 3;
 }
-.flex-4 {
-	flex: 4;
+.bg-1 {
+	background: #37d6d0;
+}
+.bg-2 {
+	background: #ff7777;
+}
+.bg-3 {
+	background: #38b6ff;
+}
+.bg-4 {
+	background: #ffa145;
+}
+.bg-5 {
+	background: #3489ff;
 }
 </style>
